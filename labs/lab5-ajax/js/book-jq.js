@@ -13,5 +13,5 @@ $("#two-cities-img").on("click", function() {
 $("#lotr-img").on("click", function() {
     $("img").fadeTo(500, 0.5);
     $("#lotr-img").fadeTo(500, 1);
-    $("#details").load("data/tolkein-data.html").hide().fadeIn(750);
+    $("#details").load("data/tolkien-data.html").hide().fadeIn(750);
 });
