@@ -1,14 +1,6 @@
 let slideIndex = 1; // Initialize slide index
 showSlides(slideIndex); // Show the first slide
 
-
-$('img').hover(function() {
-    $(this).css('cursor', 'pointer');
-    });
-  // Redirect to alumni page on slideshow picture click
-  $('.slideshow_pic').click(function() {
-    window.location.href = 'alumni.html';
-  });
 // Function to move slides forward or backward
 function plusSlides(n) {
   showSlides(slideIndex += n);
