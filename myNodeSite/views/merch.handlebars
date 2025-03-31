@@ -1,0 +1,20 @@
+<h1>AEPI Merchandise</h1>
+<div class="main-content">
+    <div class="left-column">
+        <div class="eboard-grid">
+            {{#each merchItems}}
+            <div class="eboard-member merch-item" data-id="{{id}}">
+                <img src="/images/{{image}}" alt="{{name}}">
+                <h3>{{name}}</h3>
+                <p>${{price}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="merch" id="merch-details">
+            <h2>Select a Merch Item</h2>
+            <p>Click on a merchandise item to see more details.</p>
+        </div>
+    </div>
+</div>

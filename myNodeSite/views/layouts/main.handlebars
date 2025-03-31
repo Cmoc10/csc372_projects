@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body>
+  <div class="header">
+    <img src="/images/Logo.png" alt="AEPI Logo" width="20%" height="15%" id="logo">
+    <nav class="navbar">
+      <a href="/" class="navbar_item">Home</a>
+      <a href="/about" class="navbar_item">About Us</a>
+      <a href="/contact" class="navbar_item">Contact</a>
+      <a href="/merch" class="navbar_item">Merch</a>
+      <a href="/philanthropy" class="navbar_item">Philanthropy</a>
+      <a href="/alumni" class="navbar_item">Alumni</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    {{{body}}}
+  </div>
+
+  <div class="author_info">
+    <h4>Author</h4>
+    <p>Created by: Colin O'Connor</p>
+    <a href="mailto:colin_oconnor9@uri.edu">colin_oconnor9@uri.edu</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>');
+  </script>
+  <script src="/js/scripts.js"></script>
+  {{#if pageScript}}
+  <script src="/js/{{pageScript}}"></script>
+  {{/if}}
+</body>
+</html>
