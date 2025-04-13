@@ -1,4 +1,4 @@
-<form action="/submit_form" method="post">
+<form action="/src/php/validation.php" method="post">
   <label for="name">Name (required):</label>
   <input type="text" id="name" name="name" required><br><br>
   
@@ -7,6 +7,12 @@
   
   <label for="email">Email (optional):</label>
   <input type="email" id="email" name="email"><br><br>
+
+  <label for="contact-method">Preferred Contact Method:</label><br>
+  <input type="radio" id="contact-email" name="contact-method" value="email">
+  <label for="contact-email">Email</label><br>
+  <input type="radio" id="contact-phone" name="contact-method" value="phone">
+  <label for="contact-phone">Phone</label><br><br>
   
   <input type="submit" value="Submit">
 </form>
