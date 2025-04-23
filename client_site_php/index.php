@@ -1,196 +1,135 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEPI Merch</title>
+    <title>AEPI URI</title>
     <style> @import './src/CSS/stylesheet.css';</style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <?php include 'merchItem.php'; ?>
-    
-    <?php
-    // Handle buy action
-    if (isset($_POST['action']) && $_POST['action'] == 'buy') {
-        $itemId = $_POST['item_id'];
-        $sizeIndex = $_POST['size_index'];
-        if ($merchItems[$itemId]->buy($sizeIndex)) {
-            echo "<script>alert('Purchase successful!');</script>";
-        } else {
-            echo "<script>alert('Item out of stock!');</script>";
-        }
-    }
-    
-    // Handle review action
-    if (isset($_POST['action']) && $_POST['action'] == 'review') {
-        $itemId = $_POST['item_id'];
-        $rating = $_POST['rating'];
-        $comment = $_POST['comment'];
-        $merchItems[$itemId]->addReview($rating, $comment);
-        echo "<script>alert('Review submitted!');</script>";
-    }
-    ?>
-    
+    <?php include 'src/php/validation.php' ?>
+    <div id="app"></div>
     <div class="header">
         <img src="src/images/Logo.png" alt="AEPI Logo" width="20%" height="15%" id="logo">
         <nav class="navbar">
-            <a href="index.html" class="navbar_item">Home</a>
-            <a href="About.html" class="navbar_item">About Us</a>
-            <a href="Contact.html" class="navbar_item">Contact</a>
-            <a href="Merch.php" class="navbar_item">Merch</a>
-            <a href="Philanthropy.html" class="navbar_item">Philanthropy</a>
-            <a href="Alumni.html" class="navbar_item">Alumni</a>
+            <a href="index.php" class="navbar_item">Home</a>
+            <a href="About.php" class="navbar_item">About Us</a>
+            <a href="Contact.php" class="navbar_item">Contact</a>
+            <a href="merch.php" class="navbar_item">Merch</a>
+            <a href="Philanthropy.php" class="navbar_item">Philanthropy</a>
+            <a href="Alumni.php" class="navbar_item">Alumni</a>
         </nav>
     </div>
     <div class="content">
-        <h1>AEPI Merchandise</h1>
+        <h1>Alpha Epsilon Pi</h1>
+        <p>Alpha Epsilon Pi Rho Chapter, is an upstanding organization
+            providing the best possible college and fraternity experience
+            for Jewish men. We strive to meet the standards we have made
+            for ourselves at URI</p>
+        
         <div class="main-content">
-            <div class="left-column">
-                <div class="eboard-grid">
-                    <div class="eboard-member merch-item" data-id="rush-shirt">
-                        <img src="<?php echo $merchItems['rush-shirt']->image; ?>" alt="<?php echo $merchItems['rush-shirt']->name; ?>">
-                        <h3><?php echo $merchItems['rush-shirt']->name; ?></h3>
-                        <p>$<?php echo $merchItems['rush-shirt']->price; ?></p>
-                        <?php echo $merchItems['rush-shirt']->showRatingStars(); ?>
+            <div class="left-column newsletter">
+                <h2>News</h2>
+                <div class="news">
+                    <p class="news_piece">Philanthropy Event a Success</p>
+                    <p class="news_piece">Top Golf trip for the seniors</p>
+                    <p class="news_piece">New Eboard elected</p>
+                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="src/images/donut_event.jpg" class="slideshow_pic">
                     </div>
-                    <div class="eboard-member merch-item" data-id="classic-hoodie">
-                        <img src="<?php echo $merchItems['classic-hoodie']->image; ?>" alt="<?php echo $merchItems['classic-hoodie']->name; ?>">
-                        <h3><?php echo $merchItems['classic-hoodie']->name; ?></h3>
-                        <p>$<?php echo $merchItems['classic-hoodie']->price; ?></p>
-                        <?php echo $merchItems['classic-hoodie']->showRatingStars(); ?>
+                
+                    <div class="mySlides fade">
+                        <img src="src/images/top_golf.jpg" class="slideshow_pic">
                     </div>
-                    <div class="eboard-member merch-item" data-id="baseball-cap">
-                        <img src="<?php echo $merchItems['baseball-cap']->image; ?>" alt="<?php echo $merchItems['baseball-cap']->name; ?>">
-                        <h3><?php echo $merchItems['baseball-cap']->name; ?></h3>
-                        <p>$<?php echo $merchItems['baseball-cap']->price; ?></p>
-                        <?php echo $merchItems['baseball-cap']->showRatingStars(); ?>
+                
+                    <div class="mySlides fade">
+                        <img src="src/images/eboard.jpg" class="slideshow_pic">
                     </div>
-                    <div class="eboard-member merch-item" data-id="crew-socks">
-                        <img src="<?php echo $merchItems['crew-socks']->image; ?>" alt="<?php echo $merchItems['crew-socks']->name; ?>">
-                        <h3><?php echo $merchItems['crew-socks']->name; ?></h3>
-                        <p>$<?php echo $merchItems['crew-socks']->price; ?></p>
-                        <?php echo $merchItems['crew-socks']->showRatingStars(); ?>
-                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            
+                <br>
+            
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
+            
             <div class="right-column">
-                <div class="merch" id="merch-details">
-                    <h2>Select a Merch Item</h2>
-                    <p>Click on a merchandise item to see more details.</p>
+                <div class="interested">
+                    <h2>Interested?</h2>
+                    <p>Alpha Epsilon Pi is open to all men at URI.
+                        Fill out the form below to get in contact with us</p>
+                    <button id="contact_button">Get In Contact</button>
+                        <div id = "contact_form" class="hidden">
+                        <?php if ($formSubmitted && !$hasErrors && $success): ?>
+                        <p style="color: green; font-weight: bold;">Thank you for your submission! We'll contact you soon via your preferred method.</p>
+                        <?php endif; ?>
+
+                        <?php if ($formSubmitted && $hasErrors): ?>
+                        <p style="color: red; font-weight: bold;">Please fix the errors below and submit again.</p>
+                        <?php endif; ?>
+
+                        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                        <label for="name">Name (required):</label>
+                        <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($formData['name']); ?>" required>
+                        <?php if (!empty($errors['name'])): ?>
+                            <span style="color: red;"><?php echo $errors['name']; ?></span>
+                        <?php endif; ?><br><br>
+
+                        <label for="phone">Phone (required):</label>
+                        <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($formData['phone']); ?>" required>
+                        <?php if (!empty($errors['phone'])): ?>
+                            <span style="color: red;"><?php echo $errors['phone']; ?></span>
+                        <?php endif; ?><br><br>
+
+                        <label for="email">Email (optional):</label>
+                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($formData['email']); ?>">
+                        <?php if (!empty($errors['email'])): ?>
+                            <span style="color: red;"><?php echo $errors['email']; ?></span>
+                        <?php endif; ?><br><br>
+
+                        <label>Preferred Contact Method:</label><br>
+                        <input type="radio" id="contact-email" name="contact-method" value="email" <?php echo ($formData['contact-method'] === 'email') ? 'checked' : ''; ?>>
+                        <label for="contact-email">Email</label><br>
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone" <?php echo ($formData['contact-method'] === 'phone') ? 'checked' : ''; ?>>
+                        <label for="contact-phone">Phone</label>
+                        <?php if (!empty($errors['contact-method'])): ?>
+                            <br><span style="color: red;"><?php echo $errors['contact-method']; ?></span>
+                        <?php endif; ?><br><br>
+
+                        <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="merch">
+                    <h2>Merch</h2>
+                    <p>AEPI Spring Rush Shirt Available Now</p>
+                    <img src="src/images/rush_s25_shirt.jpg" alt="Rush_Shirt" width="50%" height="20%" id="shirt" class="content-img">
                 </div>
             </div>
         </div>
+        <div class = "author_info">
+            <h4>Author</h4>
+            <p>Created by: Colin O'Connor</p>
+            <a href="mailto:colin_oconnor9@uri.edu">colin_oconnor9@uri.edu</a>
+          </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-        // had to include script here to avoid issues with PHP
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all merch items and details container
-        const merchItems = document.querySelectorAll('.merch-item');
-        const merchDetails = document.getElementById('merch-details');
-        
-        // PHP data to JavaScript
-        const merchData = {
-            'rush-shirt': {
-                title: "<?php echo addslashes($merchItems['rush-shirt']->name); ?>",
-                description: "<?php echo addslashes($merchItems['rush-shirt']->description); ?>",
-                image: "<?php echo $merchItems['rush-shirt']->image; ?>",
-                price: <?php echo $merchItems['rush-shirt']->price; ?>,
-                sizes: <?php echo json_encode($merchItems['rush-shirt']->sizes); ?>,
-                details: "<?php echo addslashes($merchItems['rush-shirt']->details); ?>",
-                quantity: <?php echo json_encode($merchItems['rush-shirt']->quantity_per_size); ?>
-            },
-            'classic-hoodie': {
-                title: "<?php echo addslashes($merchItems['classic-hoodie']->name); ?>",
-                description: "<?php echo addslashes($merchItems['classic-hoodie']->description); ?>",
-                image: "<?php echo $merchItems['classic-hoodie']->image; ?>",
-                price: <?php echo $merchItems['classic-hoodie']->price; ?>,
-                sizes: <?php echo json_encode($merchItems['classic-hoodie']->sizes); ?>,
-                details: "<?php echo addslashes($merchItems['classic-hoodie']->details); ?>",
-                quantity: <?php echo json_encode($merchItems['classic-hoodie']->quantity_per_size); ?>
-            },
-            'baseball-cap': {
-                title: "<?php echo addslashes($merchItems['baseball-cap']->name); ?>",
-                description: "<?php echo addslashes($merchItems['baseball-cap']->description); ?>",
-                image: "<?php echo $merchItems['baseball-cap']->image; ?>",
-                price: <?php echo $merchItems['baseball-cap']->price; ?>,
-                sizes: <?php echo json_encode($merchItems['baseball-cap']->sizes); ?>,
-                details: "<?php echo addslashes($merchItems['baseball-cap']->details); ?>",
-                quantity: <?php echo json_encode($merchItems['baseball-cap']->quantity_per_size); ?>
-            },
-            'crew-socks': {
-                title: "<?php echo addslashes($merchItems['crew-socks']->name); ?>",
-                description: "<?php echo addslashes($merchItems['crew-socks']->description); ?>",
-                image: "<?php echo $merchItems['crew-socks']->image; ?>",
-                price: <?php echo $merchItems['crew-socks']->price; ?>,
-                sizes: <?php echo json_encode($merchItems['crew-socks']->sizes); ?>,
-                details: "<?php echo addslashes($merchItems['crew-socks']->details); ?>",
-                quantity: <?php echo json_encode($merchItems['crew-socks']->quantity_per_size); ?>
-            }
-        };
-        
-        // Add click event listeners to all merch items
-        merchItems.forEach(item => {
-            item.addEventListener('click', function() {
-                // Get the item ID from data attribute
-                const itemId = this.getAttribute('data-id');
-                
-                // Get the item data
-                const details = merchData[itemId];
-                
-                // Create size options for the dropdown
-                let sizeOptions = '';
-                for (let i = 0; i < details.sizes.length; i++) {
-                    sizeOptions += `<option value="${i}">${details.sizes[i]} (${details.quantity[i]} available)</option>`;
-                }
-                
-                // Update the details section
-                merchDetails.innerHTML = `
-                    <h2>${details.title}</h2>
-                    <img src="${details.image}" alt="${details.title}" class="content-img">
-                    <p>${details.description}</p>
-                    <div class="merch-specs">
-                        <p><strong>Price:</strong> $${details.price.toFixed(2)}</p>
-                        <p><strong>Details:</strong> ${details.details}</p>
-                    </div>
-                    
-                    <form action="Merch.php" method="post">
-                        <input type="hidden" name="action" value="buy">
-                        <input type="hidden" name="item_id" value="${itemId}">
-                        <div class="form-group">
-                            <label for="size_index">Size:</label>
-                            <select name="size_index" id="size_index">
-                                ${sizeOptions}
-                            </select>
-                        </div>
-                        <button type="submit" id="buy_button">Add to Cart</button>
-                    </form>
-                    
-                    <h3>Leave a Review</h3>
-                    <form action="Merch.php" method="post">
-                        <input type="hidden" name="action" value="review">
-                        <input type="hidden" name="item_id" value="${itemId}">
-                        <div class="form-group">
-                            <label for="rating">Rating:</label>
-                            <select name="rating" id="rating">
-                                <option value="5">5 Stars</option>
-                                <option value="4">4 Stars</option>
-                                <option value="3">3 Stars</option>
-                                <option value="2">2 Stars</option>
-                                <option value="1">1 Star</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="comment">Comment:</label>
-                            <textarea name="comment" id="comment" rows="3"></textarea>
-                        </div>
-                        <button type="submit">Submit Review</button>
-                    </form>
-                `;
-            });
-        });
-    });
+        window.jQuery || document.write('<script src = "js/jquery-3.7.1.min.js><\/script>');
     </script>
+    <script src="src/js/index-jq.js"></script>
+    <script src="src/js/scripts.js"></script>
+    <script src="src/js/index_script.js"></script>
+    <script src="src/js/index-html.js"></script>
   </body>
 </html>

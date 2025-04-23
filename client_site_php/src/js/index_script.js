@@ -1,6 +1,6 @@
 let slideIndex = 1; // Initialize slide index
 showSlides(slideIndex); // Show the first slide
-
+$('#contact_form').hide(); // Hide the contact button initially
 
 $('img').hover(function() {
     $(this).css('cursor', 'pointer');
@@ -16,7 +16,9 @@ $('#shirt').click(function() {
   });
 
 // Show form on contact button click
-
+$('#contact_button').click(function() {
+    $('contact_form').slideDown(300);
+ }); // Toggle the visibility of the contact form
 
 // Function to move slides forward or backward
 function plusSlides(n) {
