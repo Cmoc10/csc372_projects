@@ -1,0 +1,23 @@
+<h1>Alpha Epsilon Pi</h1>
+<p>Alpha Epsilon Pi Rho Chapter, is an upstanding organization
+    providing the best possible college and fraternity experience
+    for Jewish men. We strive to meet the standards we have made
+    for ourselves at URI</p>
+
+<h2>Meet our Eboard</h2>
+<div class="eboard-grid">
+    {{#each eboardMembers}}
+    <div class="eboard-member">
+        <img src="/images/{{image}}" alt="{{title}}" class="eboard-photo">
+        <p>{{name}} - {{title}}</p>
+        <p class="eboard_description">{{description}}</p>
+    </div>
+    {{/each}}
+</div>
+
+<h2>Our History</h2>
+<p>Alpha Epsilon Pi was founded in 1913 at New York University.
+     The Rho Chapter at the University of Rhode Island was
+     established in 1928. Over the past 4 years, our chapter has
+     had a resurgence in membership and involvement. We are proud
+     of our history and excited for our future.</p>

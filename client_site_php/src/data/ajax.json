@@ -1,0 +1,33 @@
+{
+  "form": {
+    "action": "/submit_form",
+    "method": "post",
+    "fields": [
+      {
+        "label": "Name (required):",
+        "type": "text",
+        "id": "name",
+        "name": "name",
+        "required": true
+      },
+      {
+        "label": "Phone (required):",
+        "type": "tel",
+        "id": "phone",
+        "name": "phone",
+        "required": true
+      },
+      {
+        "label": "Email (optional):",
+        "type": "email",
+        "id": "email",
+        "name": "email",
+        "required": false
+      }
+    ],
+    "submit": {
+      "type": "submit",
+      "value": "Submit"
+    }
+  }
+}

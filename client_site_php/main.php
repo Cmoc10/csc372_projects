@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,8 @@
     <style> @import './src/CSS/stylesheet.css';</style>
   </head>
   <body>
-    <php include 'src/php/validation.php'; ?>
+    <?php session_start(); ?>
+    <?php include 'validation.php' ?>
     <div id="app"></div>
     <div class="header">
         <img src="src/images/Logo.png" alt="AEPI Logo" width="20%" height="15%" id="logo">
@@ -67,6 +69,44 @@
                     <p>Alpha Epsilon Pi is open to all men at URI.
                         Fill out the form below to get in contact with us</p>
                     <button id="contact_button">Get In Contact</button>
+                    <?php if ($formSubmitted && !$hasErrors && $success): ?>
+                    <p style="color: green; font-weight: bold;">Thank you for your submission! We'll contact you soon via your preferred method.</p>
+                    <?php endif; ?>
+
+                    <?php if ($formSubmitted && $hasErrors): ?>
+                    <p style="color: red; font-weight: bold;">Please fix the errors below and submit again.</p>
+                    <?php endif; ?>
+
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($formData['name']); ?>" required>
+                    <?php if (!empty($errors['name'])): ?>
+                        <span style="color: red;"><?php echo $errors['name']; ?></span>
+                    <?php endif; ?><br><br>
+
+                    <label for="phone">Phone (required):</label>
+                    <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($formData['phone']); ?>" required>
+                    <?php if (!empty($errors['phone'])): ?>
+                        <span style="color: red;"><?php echo $errors['phone']; ?></span>
+                    <?php endif; ?><br><br>
+
+                    <label for="email">Email (optional):</label>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($formData['email']); ?>">
+                    <?php if (!empty($errors['email'])): ?>
+                        <span style="color: red;"><?php echo $errors['email']; ?></span>
+                    <?php endif; ?><br><br>
+
+                    <label>Preferred Contact Method:</label><br>
+                    <input type="radio" id="contact-email" name="contact-method" value="email" <?php echo ($formData['contact-method'] === 'email') ? 'checked' : ''; ?>>
+                    <label for="contact-email">Email</label><br>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone" <?php echo ($formData['contact-method'] === 'phone') ? 'checked' : ''; ?>>
+                    <label for="contact-phone">Phone</label>
+                    <?php if (!empty($errors['contact-method'])): ?>
+                        <br><span style="color: red;"><?php echo $errors['contact-method']; ?></span>
+                    <?php endif; ?><br><br>
+
+                    <input type="submit" value="Submit">
+                    </form>
                 </div>
                 
                 <div class="merch">

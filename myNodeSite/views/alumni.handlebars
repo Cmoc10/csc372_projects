@@ -1,0 +1,71 @@
+<h1>Alpha Epsilon Pi Alumni</h1>
+<p>Stay connected with your brotherhood. Explore our alumni achievements, upcoming events, and ways to stay involved.</p>
+
+<div class="main-content">
+    <div class="left-column newsletter">
+        <h2>News</h2>
+        <div class="news">
+            <p class="news_piece">Philanthropy Event a Success</p>
+            <p class="news_piece">Top Golf trip for the seniors</p>
+            <p class="news_piece">New Eboard elected</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/images/donut_event.jpg" class="slideshow_pic">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="/images/top_golf.jpg" class="slideshow_pic">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="/images/eboard.jpg" class="slideshow_pic">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    
+        <br>
+    
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    
+    <div class="right-column">
+        <div class="interested">
+            <h2>Stay Connected</h2>
+            <p>Update your contact information, join our alumni network, and find out about upcoming events and opportunities.</p>
+            <button id="contact_button">Alumni Network</button>
+        </div>
+        
+        <div class="merch">
+            <h2>Events</h2>
+            <p>Annual Homecoming Tailgate - October 14, 2024</p>
+            <p>Alumni Applebees - March 9, 2025</p>
+            <button id="contact_button">RSVP Now</button>
+        </div>
+
+        <div class="donate">
+            <h2>Support Our Chapter</h2>
+            <p>Help current and future brothers continue the AEPI legacy through your generous contribution.</p>
+            <button id="contact_button">Donate Now</button>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Alumni Spotlight</h2>
+    <div class="eboard-grid">
+        {{#each alumniSpotlights}}
+        <div class="eboard-member">
+            <img src="/images/{{image}}" alt="{{name}}">
+            <h3>{{name}}</h3>
+            <p>{{title}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
