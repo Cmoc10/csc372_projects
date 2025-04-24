@@ -15,7 +15,7 @@
         <nav class="navbar">
             <a href="index.php" class="navbar_item">Home</a>
             <a href="about.php" class="navbar_item">About Us</a>
-            <a href="aontact.php" class="navbar_item">Contact</a>
+            <a href="contact.php" class="navbar_item">Contact</a>
             <a href="merch.php" class="navbar_item">Merch</a>
             <a href="philanthropy.php" class="navbar_item">Philanthropy</a>
             <a href="alumni.php" class="navbar_item">Alumni</a>
