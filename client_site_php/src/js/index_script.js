@@ -11,7 +11,7 @@ $('#shirt').click(function() {
   });
 
 // make the contact button scale by 5% on hover
-$('#contanct_button').hover(function() {
+$('#contact_button').hover(function() {
     $(this).css('transform', 'scale(1.05)');
 });
 // Show form on contact button click
