@@ -71,6 +71,9 @@
                         Fill out the form below to get in contact with us</p>
                     <button id="contact_button">Get In Contact</button>
                         <div id = "contact_form">
+                        <?php if (isset($_POST['submit'])) {
+                            setcookie('form_submitted', 'true', time() + 3600, '/');
+                        } ?>
                         <?php if ($formSubmitted && !$hasErrors && $success): ?>
                         <p style="color: green; font-weight: bold;">Thank you for your submission! We'll contact you soon via your preferred method.</p>
                         <?php endif; ?>

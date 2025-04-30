@@ -14,15 +14,19 @@ $('#shirt').click(function() {
 $('#contact_button').hover(function() {
     $(this).css('transform', 'scale(1.05)');
 });
-
-// Show form on contact button click
-$('#contact_button').click(function() {
-  $(this).fadeOut(200, function() {
-    $('#contact_form').slideDown(300);
+  if(document.cookie == "") {
+    // Show form on contact button click
+    $('#contact_button').click(function() {
+      $(this).fadeOut(200, function() {
+        $('#contact_form').slideDown(300);
+      }
+      );
+    });
+  } else {
+    // If cookie exists, hide button and show form
+    $('#contact_button').hide();
+    $('#contact_form').show();
   }
-  );
-});
-
 // Redirect to alumni page on slideshow picture click
 $('.slideshow_pic').click(function() {
   window.location.href = 'alumni.php';
