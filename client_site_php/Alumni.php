@@ -78,32 +78,6 @@
             </div>
         </div>
 
-        <div class="content">
-            <h2>Alumni Spotlight</h2>
-            <div class="eboard-grid">
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_1.jpg" alt="David Goldstein">
-                    <h3>David Goldstein '98</h3>
-                    <p>Tech Entrepreneur and Philanthropist</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_2.jpg" alt="Michael Rothman">
-                    <h3>Michael Rothman '05</h3>
-                    <p>Community Leader and Non-Profit Director</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_3.jpg" alt="Aaron Levy">
-                    <h3>Aaron Levy '12</h3>
-                    <p>Medical Researcher and Innovator</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_4.jpg" alt="Jason Cohen">
-                    <h3>Jason Cohen '15</h3>
-                    <p>Investment Banker and Mentor</p>
-                </div>
-            </div>
-        </div>
-
         <div class = "author_info">
             <h4>Author</h4>
             <p>Created by: Colin O'Connor</p>

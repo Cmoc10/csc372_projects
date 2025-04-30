@@ -35,18 +35,17 @@
                     <p class="news_piece">Philanthropy Event a Success</p>
                     <p class="news_piece">Top Golf trip for the seniors</p>
                     <p class="news_piece">New Eboard elected</p>
-                </div>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="src/images/donut_event.jpg" class="slideshow_pic">
+                        <img src="src/images/donut_event.jpg" class="slideshow_pic" alt="Donut Event">
                     </div>
                 
                     <div class="mySlides fade">
-                        <img src="src/images/top_golf.jpg" class="slideshow_pic">
+                        <img src="src/images/top_golf.jpg" class="slideshow_pic" alt="Top Golf Event">
                     </div>
                 
                     <div class="mySlides fade">
-                        <img src="src/images/eboard.jpg" class="slideshow_pic">
+                        <img src="src/images/eboard.jpg" class="slideshow_pic" alt="New Eboard Members">
                     </div>
                 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

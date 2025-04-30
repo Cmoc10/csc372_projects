@@ -12,12 +12,12 @@ $('#shirt').click(function() {
   
   // Redirect to alumni page on slideshow picture click
   $('.slideshow_pic').click(function() {
-    window.location.href = 'alumni.html';
+    window.location.href = 'alumni.php';
   });
 
 // Show form on contact button click
 $('#contact_button').click(function() {
-    $('contact_form').slideDown(300);
+    $('#contact_form').slideDown(300);
  }); // Toggle the visibility of the contact form
 
 // Function to move slides forward or backward
