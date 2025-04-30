@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const merchItems = document.querySelectorAll('.merch-item');
     const merchDetails = document.getElementById('merch-details');
-
+    // ONLY CHANGE WHAT IS IN THE QUOTES
+    // IF YOU ARE ADDING A NEW ITEM, COPY AND PAST AN OLD ITEM
+    // AND CHANGE EVERYTHING IN THE QUOTES INCLUDING THE NAME
     const merchData = {
         'rush-shirt': {
             title: 'Spring \'25 Rush Shirt',
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             details: 'Cushioned sole, breathable material'
         }
     };
-
+    //DO NOT EDIT BELOW THIS LINE
     merchItems.forEach(item => {
         item.addEventListener('click', () => {
             // Remove active state from all items

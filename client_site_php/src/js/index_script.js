@@ -10,15 +10,15 @@ $('#shirt').click(function() {
     window.location.href = 'merch.html';
   });
   
-  // Redirect to alumni page on slideshow picture click
-  $('.slideshow_pic').click(function() {
-    window.location.href = 'alumni.php';
-  });
-
 // Show form on contact button click
 $('#contact_button').click(function() {
-    $('#contact_form').slideDown(300);
- }); // Toggle the visibility of the contact form
+  $('#contact_form').slideDown(300);
+});
+
+// Redirect to alumni page on slideshow picture click
+$('.slideshow_pic').click(function() {
+  window.location.href = 'alumni.php';
+});
 
 // Function to move slides forward or backward
 function plusSlides(n) {

@@ -39,7 +39,7 @@
                 <div class="interested">
                     <h3>Get In Touch</h3>
                     <p>Fill out the form below to get in contact with us</p>
-                    <div id = "contact_form" class="hidden">
+                    <div id = "contact_form">
                         <?php if ($formSubmitted && !$hasErrors && $success): ?>
                         <p style="color: green; font-weight: bold;">Thank you for your submission! We'll contact you soon via your preferred method.</p>
                         <?php endif; ?>

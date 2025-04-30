@@ -37,14 +37,17 @@
                     <p class="news_piece">New Eboard elected</p>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
+                        <!-- PUT THE IMAGE NAME HERE INSIDE OF THE QUOTES -->
                         <img src="src/images/donut_event.jpg" class="slideshow_pic" alt="Donut Event">
                     </div>
                 
                     <div class="mySlides fade">
+                        <!-- PUT THE IMAGE NAME HERE INSIDE OF THE QUOTES -->
                         <img src="src/images/top_golf.jpg" class="slideshow_pic" alt="Top Golf Event">
                     </div>
                 
                     <div class="mySlides fade">
+                        <!-- PUT THE IMAGE NAME HERE INSIDE OF THE QUOTES -->
                         <img src="src/images/eboard.jpg" class="slideshow_pic" alt="New Eboard Members">
                     </div>
                 
