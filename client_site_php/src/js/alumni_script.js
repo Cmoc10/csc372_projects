@@ -1,7 +1,6 @@
 let slideIndex = 1; // Initialize slide index
 showSlides(slideIndex); // Show the first slide
 
-
 $('#contact_button').hover(function() {
   $(this).css('transform', 'scale(1.05)');
 });
