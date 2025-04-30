@@ -14,6 +14,7 @@ $('#shirt').click(function() {
 $('#contact_button').hover(function() {
     $(this).css('transform', 'scale(1.05)');
 });
+
 // Show form on contact button click
 $('#contact_button').click(function() {
   $(this).fadeOut(200, function() {
