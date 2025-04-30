@@ -63,6 +63,7 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
+</div>
             <div class="right-column">
                 <div class="interested">
                     <h2>Interested?</h2>

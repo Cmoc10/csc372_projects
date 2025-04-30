@@ -9,10 +9,17 @@ $('img').hover(function() {
 $('#shirt').click(function() {
     window.location.href = 'merch.html';
   });
-  
+
+// make the contact button scale by 5% on hover
+$('#contanct_button').hover(function() {
+    $(this).css('transform', 'scale(1.05)');
+});
 // Show form on contact button click
 $('#contact_button').click(function() {
-  $('#contact_form').slideDown(300);
+  $(this).fadeOut(200, function() {
+    $('#contact_form').slideDown(300);
+  }
+  );
 });
 
 // Redirect to alumni page on slideshow picture click
