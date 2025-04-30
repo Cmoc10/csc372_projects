@@ -63,14 +63,13 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            
             <div class="right-column">
                 <div class="interested">
                     <h2>Interested?</h2>
                     <p>Alpha Epsilon Pi is open to all men at URI.
                         Fill out the form below to get in contact with us</p>
                     <button id="contact_button">Get In Contact</button>
-                        <div id = "contact_form" class="hidden">
+                        <div id = "contact_form">
                         <?php if ($formSubmitted && !$hasErrors && $success): ?>
                         <p style="color: green; font-weight: bold;">Thank you for your submission! We'll contact you soon via your preferred method.</p>
                         <?php endif; ?>
