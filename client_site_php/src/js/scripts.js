@@ -2,7 +2,7 @@
 $('#logo').hover(function() {
   $(this).css('cursor', 'pointer');
   $(this).click(function() {
-    window.location.href = 'index.html'; // Redirect to homepage on click
+    window.location.href = 'index.php'; // Redirect to homepage on click
   });
 });
 

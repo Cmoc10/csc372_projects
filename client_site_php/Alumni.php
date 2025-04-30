@@ -11,11 +11,11 @@
         <img src="src/images/Logo.png" alt="AEPI Logo" width="20%" height="15%" id="logo">
         <nav class="navbar">
             <a href="index.php" class="navbar_item">Home</a>
-            <a href="About.php" class="navbar_item">About Us</a>
-            <a href="Contact.php" class="navbar_item">Contact</a>
+            <a href="about.php" class="navbar_item">About Us</a>
+            <a href="contact.php" class="navbar_item">Contact</a>
             <a href="merch.php" class="navbar_item">Merch</a>
-            <a href="Philanthropy.php" class="navbar_item">Philanthropy</a>
-            <a href="Alumni.php" class="navbar_item">Alumni</a>
+            <a href="philanthropy.php" class="navbar_item">Philanthropy</a>
+            <a href="alumni.php" class="navbar_item">Alumni</a>
         </nav>
     </div>
     <div class="content">
@@ -74,32 +74,6 @@
                     <h2>Support Our Chapter</h2>
                     <p>Help current and future brothers continue the AEPI legacy through your generous contribution.</p>
                     <button id="contact_button">Donate Now</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="content">
-            <h2>Alumni Spotlight</h2>
-            <div class="eboard-grid">
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_1.jpg" alt="David Goldstein">
-                    <h3>David Goldstein '98</h3>
-                    <p>Tech Entrepreneur and Philanthropist</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_2.jpg" alt="Michael Rothman">
-                    <h3>Michael Rothman '05</h3>
-                    <p>Community Leader and Non-Profit Director</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_3.jpg" alt="Aaron Levy">
-                    <h3>Aaron Levy '12</h3>
-                    <p>Medical Researcher and Innovator</p>
-                </div>
-                <div class="eboard-member">
-                    <img src="src/images/alumni_spotlight_4.jpg" alt="Jason Cohen">
-                    <h3>Jason Cohen '15</h3>
-                    <p>Investment Banker and Mentor</p>
                 </div>
             </div>
         </div>

@@ -34,11 +34,11 @@
         <img src="src/images/Logo.png" alt="AEPI Logo" width="20%" height="15%" id="logo">
         <nav class="navbar">
             <a href="index.php" class="navbar_item">Home</a>
-            <a href="About.php" class="navbar_item">About Us</a>
-            <a href="Contact.php" class="navbar_item">Contact</a>
+            <a href="about.php" class="navbar_item">About Us</a>
+            <a href="contact.php" class="navbar_item">Contact</a>
             <a href="merch.php" class="navbar_item">Merch</a>
-            <a href="Philanthropy.php" class="navbar_item">Philanthropy</a>
-            <a href="Alumni.php" class="navbar_item">Alumni</a>
+            <a href="philanthropy.php" class="navbar_item">Philanthropy</a>
+            <a href="alumni.php" class="navbar_item">Alumni</a>
         </nav>
     </div>
     <div class="content">
