@@ -11,6 +11,13 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+$('#contact_button').hover(function() {
+  $(this).css('transform', 'scale(1.05)');
+});
+  $('#contact_button').click(function() {
+    window.location.href = '404.php'; // Redirect to contact page on click
+  });
+
 // Function to show slides based on the current slide index
 function showSlides(n) {
   let slides = $(".mySlides");
