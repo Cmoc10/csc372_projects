@@ -1,11 +1,11 @@
 let slideIndex = 1; // Initialize slide index
 showSlides(slideIndex); // Show the first slide
 
-$('#contact_button').hover(function() {
+$('[id=contact_button]').hover(function() {
   $(this).css('transform', 'scale(1.05)');
 });
 
-$('#contact_button').click(function() {
+$('[id=contact_button]').click(function() {
   window.location.href = '404.php'; // Redirect to contact page on click
 });
 
